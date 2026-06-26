@@ -45,6 +45,11 @@ Confirm the following information with the user:
 pip install 'volcengine-python-sdk[ark]'
 ```
 
+```bash
+ARK_API_KEY=$ARK_API_KEY
+```
+
+
 ### Step 3: Run the Script
 
 Call `scripts/gen_video.py` to execute the video generation task.

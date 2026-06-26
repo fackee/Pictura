@@ -28,6 +28,10 @@ Using the **new console** is recommended; it only requires one API Key:
 
 The legacy console requires App ID + Access Key (or App Key + Access Key).
 
+```bash
+export DOUBAO_API_KEY=$DOUBAO_API_KEY
+```
+
 **3. Enable Services**
 - TTS public voices: Enable "Doubao Speech Synthesis Large Model"
 - Voice cloning: Enable "Voice Cloning Large Model"

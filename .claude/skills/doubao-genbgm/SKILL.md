@@ -23,8 +23,11 @@ pip install requests
 
 **2. Configure Authentication**
 ```bash
-cp .env.example .env
 # Edit .env and fill in your Volcano Engine AccessKey and SecretKey
+export VOLC_ACCESS_KEY=$VOLC_ACCESS_KEY
+
+# 火山引擎 Secret Access Key（必填）
+export VOLC_SECRET_KEY=$VOLC_SECRET_KEY
 ```
 
 Obtain your AccessKeyId and SecretAccessKey from the [Volcano Engine Console -> Key Management](https://console.volcengine.com/iam/keymanage/).

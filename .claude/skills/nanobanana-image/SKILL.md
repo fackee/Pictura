@@ -22,6 +22,9 @@ pip install google-genai Pillow
 **2. Set API Key**
 ```bash
 export GEMINI_API_KEY=your_gemini_api_key
+# HTTP/HTTPS proxy (optional)
+# export HTTPS_PROXY=$HTTPS_PROXY
+# export HTTP_PROXY=$HTTP_PROXY
 ```
 
 Get your API Key from [Google AI Studio](https://aistudio.google.com/apikey) or [Google Cloud Console](https://console.cloud.google.com/).
