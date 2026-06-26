@@ -1,6 +1,20 @@
-# ContentCreator / AI 自动化内容创作 Agent
+# Pictura / AI 全自动视频制作 Agent
 
 [English](#english) | [中文](#中文)
+
+---
+
+> **Just one line of input — Pictura handles the rest.**
+
+https://github.com/fackee/Pictura/blob/main/2026-06-26-ai-history/output.mp4
+
+The demo above was produced with a single input:
+
+```
+Generate a 3-minute short video about "the history of AI"
+```
+
+No script writing, no asset sourcing, no manual editing. Pictura autonomously orchestrated the entire pipeline — requirement clarification, script writing, illustration generation, voiceover synthesis, BGM composition, and final rendering — delivering a polished, ready-to-publish video.
 
 ---
 
@@ -8,9 +22,9 @@
 
 ## Overview
 
-**ContentCreator** is an AI-powered automated video production agent. Given a content topic, it orchestrates the entire pipeline — from requirement gathering, script writing, and asset generation to final video rendering — delivering a polished, ready-to-publish video product.
+**Pictura** is an AI-powered automated video production agent. Given a content topic, it orchestrates the entire pipeline — from requirement gathering, script writing, and asset generation to final video rendering — delivering a polished, ready-to-publish video product.
 
-Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with a modular skill architecture, ContentCreator coordinates 5 specialized skills to handle images, video, narration, music, and compositing. No manual editing required.
+Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with a modular skill architecture, Pictura coordinates 5 specialized skills to handle images, video, narration, music, and compositing. No manual editing required.
 
 ## Features
 
@@ -116,7 +130,7 @@ python3 scripts/render.py \
 Every production run creates a dated subfolder:
 
 ```
-ContentCeator/
+Pictura/
 ├── CLAUDE.md                           # Agent instructions & pipeline rules
 ├── README.md                           # This file
 ├── guide/                              # Prompting guides
@@ -129,14 +143,7 @@ ContentCeator/
 │       ├── doubao-tts/                  #   Speech synthesis & cloning
 │       ├── doubao-genbgm/               #   Music generation
 │       └── video-editor/               #   Video rendering engine
-├── 2026-06-26-static-friction/         # Example project: physics concept
-│   ├── requirement.md
-│   ├── project.json
-│   ├── images/
-│   ├── audios/
-│   ├── bgms/
-│   └── static-friction.mp4
-└── 2026-06-26-ai-history/              # Example project: AI history
+└── 2026-06-26-ai-history/              # Demo: AI History
     ├── requirement.md
     ├── project.json
     ├── images/
@@ -188,18 +195,18 @@ pip install requests moviepy pillow google-genai
 
 ```bash
 # Launch Claude Code in the project directory
-cd ContentCeator
+cd Pictura
 claude
 
 # Then describe your video topic, e.g.:
-> Generate a 2-minute video about the solar system, cartoon style, English narration
+> Generate a 3-minute short video about "the history of AI"
 ```
 
-## Examples
+## Demo
 
-| Project | Topic | Duration | Mode | Style |
+| Project | Input | Duration | Mode | Style |
 |---------|-------|----------|------|-------|
-| `2026-06-26-ai-history` | History of Artificial Intelligence | ~108s | Cost-first | Cartoon illustrations |
+| `2026-06-26-ai-history` | Generate a 3-minute short video about "the history of AI" | ~108s | Cost-first | Cartoon illustrations |
 
 ## License
 
@@ -209,11 +216,25 @@ MIT
 
 <a id="中文"></a>
 
+> **只需一行输入 —— Pictura 自动完成剩余一切。**
+
+https://github.com/fackee/Pictura/blob/main/2026-06-26-ai-history/output.mp4
+
+上面的演示视频仅通过一行输入生成：
+
+```
+生成3分钟短视频介绍"ai发展史"
+```
+
+无需编写脚本、无需寻找素材、无需手动剪辑。Pictura 自主完成需求确认、脚本撰写、插画生成、配音合成、BGM 作曲与最终渲染全流程，直接交付可发布的成品视频。
+
+---
+
 ## 项目简介
 
-**ContentCreator** 是一个 AI 驱动的自动化视频制作 Agent。只需给出内容主题，它就能自动完成从需求沟通、脚本编写、素材生成到最终渲染的全流程，直接交付可发布的成品视频。
+**Pictura** 是一个 AI 驱动的自动化视频制作 Agent。只需给出内容主题，它就能自动完成从需求沟通、脚本编写、素材生成到最终渲染的全流程，直接交付可发布的成品视频。
 
-基于 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 构建并采用模块化 Skill 架构，ContentCreator 协调 5 个专业化的 Skill 来处理图片、视频、配音、配乐和合成，无需手动剪辑。
+基于 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 构建并采用模块化 Skill 架构，Pictura 协调 5 个专业化的 Skill 来处理图片、视频、配音、配乐和合成，无需手动剪辑。
 
 ## 核心特性
 
@@ -319,7 +340,7 @@ python3 scripts/render.py \
 每次制作产出以日期命名的子目录：
 
 ```
-ContentCeator/
+Pictura/
 ├── CLAUDE.md                           # Agent 指令与流程规则
 ├── README.md                           # 本文件
 ├── guide/                              # 提示词指南
@@ -332,14 +353,7 @@ ContentCeator/
 │       ├── doubao-tts/                  #   语音合成与克隆
 │       ├── doubao-genbgm/               #   音乐生成
 │       └── video-editor/               #   视频渲染引擎
-├── 2026-06-26-static-friction/         # 示例项目：物理概念
-│   ├── requirement.md
-│   ├── project.json
-│   ├── images/
-│   ├── audios/
-│   ├── bgms/
-│   └── static-friction.mp4
-└── 2026-06-26-ai-history/              # 示例项目：AI 发展史
+└── 2026-06-26-ai-history/              # 演示项目：AI 发展史
     ├── requirement.md
     ├── project.json
     ├── images/
@@ -391,19 +405,18 @@ pip install requests moviepy pillow google-genai
 
 ```bash
 # 在项目目录中启动 Claude Code
-cd ContentCeator
+cd Pictura
 claude
 
 # 描述你的视频主题，例如：
-> 生成一个2分钟关于太阳系的视频，卡通风格，英文配音
+> 生成3分钟短视频介绍"ai发展史"
 ```
 
-## 示例项目
+## 演示项目
 
-| 项目 | 主题 | 时长 | 模式 | 风格 |
+| 项目 | 输入 | 时长 | 模式 | 风格 |
 |------|------|------|------|------|
-| `2026-06-26-static-friction` | 静摩擦力（物理） | ~18s | 成本优先 | 写实示意图 |
-| `2026-06-26-ai-history` | 人工智能发展史 | ~108s | 成本优先 | 卡通插画 |
+| `2026-06-26-ai-history` | 生成3分钟短视频介绍"ai发展史" | ~108s | 成本优先 | 卡通插画 |
 
 ## License
 
