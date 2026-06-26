@@ -1,0 +1,229 @@
+{
+  "project_name": "ai-history",
+  "version": "2.0.0",
+  "output_settings": {
+    "resolution": { "width": 1080, "height": 1920 },
+    "fps": 30,
+    "video_codec": "libx264",
+    "audio_codec": "aac"
+  },
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "title": "AI-History-Timeline",
+      "duration": 108.0,
+      "visual_track": [
+        {
+          "id": "img_turing",
+          "type": "image",
+          "file_path": "images/turing-test.png",
+          "z_index": 1,
+          "start_time": 0.0,
+          "end_time": 14.744,
+          "layout": { "x": 0, "y": 0, "width": 1080, "height": 1920 },
+          "fx": {
+            "in": { "type": "fade_in", "duration": 0.5 },
+            "loop": { "type": "ken_burns", "scale_start": 1.0, "scale_end": 1.04 }
+          }
+        },
+        {
+          "id": "img_expert",
+          "type": "image",
+          "file_path": "images/expert-systems.png",
+          "z_index": 1,
+          "start_time": 14.744,
+          "end_time": 32.832,
+          "layout": { "x": 0, "y": 0, "width": 1080, "height": 1920 },
+          "fx": {
+            "in": { "type": "slide_in", "direction": "left", "duration": 0.5 },
+            "loop": { "type": "ken_burns", "scale_start": 1.0, "scale_end": 1.04 }
+          }
+        },
+        {
+          "id": "img_deepblue",
+          "type": "image",
+          "file_path": "images/deep-blue.png",
+          "z_index": 1,
+          "start_time": 32.832,
+          "end_time": 51.352,
+          "layout": { "x": 0, "y": 0, "width": 1080, "height": 1920 },
+          "fx": {
+            "in": { "type": "slide_in", "direction": "left", "duration": 0.5 },
+            "loop": { "type": "ken_burns", "scale_start": 1.0, "scale_end": 1.04 }
+          }
+        },
+        {
+          "id": "img_deeplearn",
+          "type": "image",
+          "file_path": "images/deep-learning.png",
+          "z_index": 1,
+          "start_time": 51.352,
+          "end_time": 68.696,
+          "layout": { "x": 0, "y": 0, "width": 1080, "height": 1920 },
+          "fx": {
+            "in": { "type": "slide_in", "direction": "left", "duration": 0.5 },
+            "loop": { "type": "ken_burns", "scale_start": 1.0, "scale_end": 1.04 }
+          }
+        },
+        {
+          "id": "img_transformer",
+          "type": "image",
+          "file_path": "images/transformer-gpt.png",
+          "z_index": 1,
+          "start_time": 68.696,
+          "end_time": 85.008,
+          "layout": { "x": 0, "y": 0, "width": 1080, "height": 1920 },
+          "fx": {
+            "in": { "type": "slide_in", "direction": "left", "duration": 0.5 },
+            "loop": { "type": "ken_burns", "scale_start": 1.0, "scale_end": 1.04 }
+          }
+        },
+        {
+          "id": "img_future",
+          "type": "image",
+          "file_path": "images/ai-future.png",
+          "z_index": 1,
+          "start_time": 85.008,
+          "end_time": 108.0,
+          "layout": { "x": 0, "y": 0, "width": 1080, "height": 1920 },
+          "fx": {
+            "in": { "type": "slide_in", "direction": "left", "duration": 0.5 },
+            "out": { "type": "fade_out", "duration": 1.5 },
+            "loop": { "type": "ken_burns", "scale_start": 1.0, "scale_end": 1.03 }
+          }
+        }
+      ],
+      "audio_track": {
+        "narration": [
+          {
+            "id": "narr_01",
+            "file_path": "audios/narr-01.mp3",
+            "start_time": 0.0,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "The story of artificial intelligence begins in 1950, when Alan Turing asked a groundbreaking question."
+            }
+          },
+          {
+            "id": "narr_02",
+            "file_path": "audios/narr-02.mp3",
+            "start_time": 8.552,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "Can machines think? Turing proposed the Imitation Game, now known as the Turing Test."
+            }
+          },
+          {
+            "id": "narr_03",
+            "file_path": "audios/narr-03.mp3",
+            "start_time": 16.744,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "In the 1960s and 70s, researchers built expert systems, programs that mimicked human decision-making."
+            }
+          },
+          {
+            "id": "narr_04",
+            "file_path": "audios/narr-04.mp3",
+            "start_time": 25.824,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "But early AI was limited by hardware and data. Progress stalled, leading to the first AI Winter."
+            }
+          },
+          {
+            "id": "narr_05",
+            "file_path": "audios/narr-05.mp3",
+            "start_time": 34.832,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "In 1997, IBM's Deep Blue defeated world chess champion Garry Kasparov, marking a historic comeback."
+            }
+          },
+          {
+            "id": "narr_06",
+            "file_path": "audios/narr-06.mp3",
+            "start_time": 45.088,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "The 2000s brought a revolution in machine learning, powered by bigger data and faster computers."
+            }
+          },
+          {
+            "id": "narr_07",
+            "file_path": "audios/narr-07.mp3",
+            "start_time": 53.352,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "In 2012, deep learning made a breakthrough when AlexNet crushed the image recognition competition."
+            }
+          },
+          {
+            "id": "narr_08",
+            "file_path": "audios/narr-08.mp3",
+            "start_time": 61.712,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "Then in 2017, researchers at Google introduced the Transformer architecture, changing everything."
+            }
+          },
+          {
+            "id": "narr_09",
+            "file_path": "audios/narr-09.mp3",
+            "start_time": 70.696,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "Transformers enabled GPT models to generate human-like text, images, and even code."
+            }
+          },
+          {
+            "id": "narr_10",
+            "file_path": "audios/narr-10.mp3",
+            "start_time": 78.552,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "ChatGPT, launched in 2022, brought AI into everyday life for millions of people."
+            }
+          },
+          {
+            "id": "narr_11",
+            "file_path": "audios/narr-11.mp3",
+            "start_time": 87.008,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "Today, AI is everywhere, from self-driving cars to medical diagnosis and creative arts."
+            }
+          },
+          {
+            "id": "narr_12",
+            "file_path": "audios/narr-12.mp3",
+            "start_time": 95.776,
+            "volume": 1.0,
+            "subtitle": {
+              "text": "The journey of AI has only just begun. The future is being written, one algorithm at a time."
+            }
+          }
+        ],
+        "bgm": [
+          {
+            "id": "bgm_1",
+            "file_path": "bgms/bgm-tech-01.mp3",
+            "start_time": 0.0,
+            "volume": 0.15,
+            "source_trim": { "start": 0.0, "end": 55.0 },
+            "fx": { "fade_in": 2.0, "fade_out": 1.0 }
+          },
+          {
+            "id": "bgm_2",
+            "file_path": "bgms/bgm-tech-02.mp3",
+            "start_time": 55.0,
+            "volume": 0.15,
+            "source_trim": { "start": 0.0, "end": 53.0 },
+            "fx": { "fade_in": 1.0, "fade_out": 2.0 }
+          }
+        ],
+        "sfx": []
+      }
+    }
+  ]
+}

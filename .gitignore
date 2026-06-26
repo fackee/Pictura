@@ -1,0 +1,24 @@
+# --- Secrets (CRITICAL: never commit .env files) ---
+.env
+.env.*
+!.env.example
+
+# --- Claude local settings ---
+.claude/settings.local.json
+
+# --- macOS ---
+.DS_Store
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# --- Node ---
+node_modules/
+
+# --- IDE ---
+.vscode/
+.idea/
