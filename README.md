@@ -6,7 +6,7 @@
 
 > **Just one line of input — Pictura handles the rest.**
 
-https://github.com/fackee/Pictura/blob/main/2026-06-26-ai-history/output.mp4
+https://github.com/user-attachments/assets/8a8b2ab8-718f-46ff-8746-ca400f0de913
 
 The demo above was produced with a single input:
 
@@ -218,7 +218,7 @@ MIT
 
 > **只需一行输入 —— Pictura 自动完成剩余一切。**
 
-https://github.com/fackee/Pictura/blob/main/2026-06-26-ai-history/output.mp4
+https://github.com/user-attachments/assets/8a8b2ab8-718f-46ff-8746-ca400f0de913
 
 上面的演示视频仅通过一行输入生成：
 
