@@ -17,12 +17,28 @@ Output the finalized requirement document: `{date}-{contentSummary}/requirement.
 
 ## Step 2: Choose Production Mode
 
-Offer the user two modes after requirements are confirmed:
+Offer the user three modes after requirements are confirmed:
 
 | Mode | Description |
 |------|-------------|
-| **Quality-first** | Use video assets (via `seedance2-gen-video`) for richer, more dynamic visuals. Best for showcase content. |
-| **Cost-first** | Use static images (via `nanobanana-image`) in place of video assets. Faster and cheaper. Best for quick tests or educational content. |
+| **Quality-first** | Use AI-generated video assets (via `seedance2-gen-video`) for richest, most dynamic visuals. Best for showcase content. |
+| **Balanced** | Use HTML/JS animated videos (via `html-animate-video`) for dynamic visuals at zero API cost. Best for tech-style content. |
+| **Cost-first** | Use static images (via `nanobanana-image`) in place of video assets. Fastest and cheapest. Best for quick tests or educational content. |
+
+**When to use `html-animate-video` vs `seedance2-gen-video`:**
+
+| Visual need | Recommended skill | Reason |
+|-------------|-------------------|--------|
+| Text animations (typewriter, kinetic typography, countdown) | `html-animate-video` | Precise control over text timing and layout |
+| Data visualization (charts, graphs, progress bars) | `html-animate-video` | Deterministic rendering of data-driven graphics |
+| Particle/geometric effects (matrix rain, grids, shapes) | `html-animate-video` | Code-driven patterns are easy and reliable |
+| UI/product demos (mock screens, app walkthroughs) | `html-animate-video` | Pixel-perfect reproduction of interface elements |
+| Natural scenery (forests, oceans, weather) | `seedance2-gen-video` | AI excels at photorealistic environments |
+| People/animals in motion | `seedance2-gen-video` | AI handles organic motion far better |
+| Cinematic camera moves on realistic scenes | `seedance2-gen-video` | AI understands perspective and depth |
+| Abstract artistic visuals with organic feel | `seedance2-gen-video` | AI produces creative, unpredictable results |
+
+If a segment calls for realism or organic motion, use AI video. If it calls for precision, data, or code-driven patterns, use HTML animation. Mixed usage within one project is expected and encouraged.
 
 ## Step 3: Script Breakdown & Project JSON
 
@@ -48,6 +64,7 @@ Generate all assets in parallel where possible, based on the `project.json` meta
 |-------|-------|-------|
 | Images | `nanobanana-image` | Follow prompting guide in `guide/nano-banana-guide.md`. Use `--aspect-ratio` matching the video. |
 | Videos | `seedance2-gen-video` | Follow prompting guide in `guide/generate-video-guide.md`. |
+| Animated Videos | `html-animate-video` | Self-contained HTML/JS animation, captured via Playwright, exported as MP4. Use `--bg-color` matching the video background (MP4 has no transparency). Output goes to `videos/` directory. |
 | Narration | `doubao-tts` | Split script into sentence-level fragments. Each fragment becomes one TTS clip + one subtitle entry. Use `--language en` for English. |
 | BGM | `doubao-genbgm` | Generate in BGM mode. Duration 30s per track is sufficient; trim via `source_trim` in `project.json`. |
 
@@ -70,7 +87,7 @@ Every production run creates a subfolder:
 ├── requirement.md
 ├── project.json
 ├── images/       # *.png
-├── videos/       # *.mp4
+├── videos/       # *.mp4 (AI-generated or HTML/JS animated)
 ├── audios/       # *.mp3  (narration clips)
 ├── bgms/         # *.mp3
 ├── subtitles/    # *.srt
@@ -89,3 +106,4 @@ Example: `2026-06-26-static-friction/`
 - **Measure, don't guess**: After generating TTS audio, always use `ffprobe` to get actual durations. Update `project.json` with real timings before rendering.
 - **Parallel generation**: Launch image, BGM, and TTS generation in parallel to save time. Be mindful of API rate limits (QPS) — if a call fails with a rate-limit error, retry after a short delay.
 - **Asset paths in `project.json`**: All `file_path` values are relative to the `--base-dir` parameter. Do not use absolute paths.
+- **Animated video assets**: When using `html-animate-video`, set `--bg-color` to match the video background (MP4 does not support transparency). In `project.json`, use `type: "video"` with `volume: 0` since animated videos have no audio. Follow the skill's `references/animation-recipes.md` for ready-to-use animation patterns.
